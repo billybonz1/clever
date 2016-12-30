@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ebaede93-1e41-42fb-b40b-3ffa9718b3ae" name="clever" url="http://klever.kalinigroup.com/">
+        <fileTransfer host="kalinigr.ftp.ukraine.com.ua" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
