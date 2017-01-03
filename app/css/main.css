@@ -3132,7 +3132,7 @@ body textarea:required:valid {
   background-image: url(../img/section1-bg.png);
   min-height: 772px;
   position: relative;
-  top: -75px;
+  top: -45px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3883,6 +3883,25 @@ footer {
   .buttonClass:active {
     background-color: black; }
 
+@media only screen and (max-width: 1750px) {
+  .text {
+    left: 220px; }
+  .h3first {
+    width: 103%; }
+  .h3second {
+    width: 66%; }
+  .head-menu {
+    background-position: center; }
+  .head .header-mnu {
+    width: 533px;
+    padding-left: 6px; } }
+
+@media only screen and (max-width: 1600px) {
+  .head__content__slider__calls {
+    right: 230px; }
+  .head__content__slider__logo {
+    left: 260px; } }
+
 @media only screen and (max-width: 1400px) {
   .head .header-mnu {
     padding-top: 0; } }
@@ -3908,14 +3927,21 @@ footer {
     bottom: 9px; }
   .head__content__slider__calls {
     right: 20px;
-    top: 0; }
+    top: 40px; }
   .head__content__slider__logo {
-    left: 20px;
-    top: 0; }
+    left: 40px;
+    top: 36px; }
+  .text {
+    left: 30px; }
   .head__content__slider img {
     width: 100%; } }
 
 @media only screen and (max-width: 1204px) {
+  .head__content__slider .lSSlideOuter .lSPager {
+    position: absolute;
+    left: 300px;
+    bottom: -40px;
+    z-index: 1; }
   .section2__content__item2 {
     width: 550px; }
   .section2__content__item2 {
@@ -3944,13 +3970,21 @@ footer {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .head__content__slider__logo {
+    left: 40px;
+    top: 10px; }
+  .head__content__slider__calls {
+    right: 20px;
+    top: 15px; }
+  .section1 {
+    top: -85px; }
   .head__content__slider .lSSlideOuter .lSPager {
     position: absolute;
     left: 239px;
     bottom: -32px;
     z-index: 1; }
   .text {
-    left: 10px; }
+    display: none; }
   .wrapper {
     width: auto; }
   .pad {
@@ -3992,7 +4026,7 @@ footer {
   .head__content__slider__logo {
     position: static;
     width: 225px;
-    margin: 0 auto;
+    margin: 30px auto;
     z-index: 0; }
   .head__content__slider__calls {
     position: static;
@@ -4007,8 +4041,10 @@ footer {
       text-align: center;
       width: 225px;
       margin: 0 auto; }
-    .head__content__slider__calls ul li {
-      text-align: center; }
+    .head__content__slider__calls ul {
+      float: none; }
+      .head__content__slider__calls ul li {
+        text-align: center; }
   .works__content__block__item-big {
     width: 370px;
     height: 366px; }

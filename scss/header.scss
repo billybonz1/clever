@@ -810,8 +810,9 @@ a:hover {
 	.header-mnu{
 		vertical-align: top;
 		margin: 0 auto;
-		width: 522px;
-		padding-top: 15px;
+		width: 577px;
+		padding-top: 25px;
+		padding-left: 55px;
 		ul{
 			li{
 				float: left;
@@ -906,7 +907,7 @@ a:hover {
 	background-image: url("../img/header-bg.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 82px;
+	height: 116px;
 }
 .head__content__slider{
 	position: relative;
@@ -929,7 +930,6 @@ a:hover {
 		font-family: Cuprum;
 		font-size: 34px;
 		font-weight: 700;
-		font-style: italic;
 		line-height: 28px;
 		text-transform: uppercase;
 		text-align: left;
@@ -945,37 +945,43 @@ a:hover {
 }
 .head__content__slider__logo{
 	position: absolute;
-	left: 210px;
-	top: 30px;
+	left: 385px;
+	top: 0;
 	z-index: 2;
 }
 .head__content__slider__calls{
-	width: 209px;
+	width: 245px;
 	position: absolute;
-	top: 43px;
-	right: 192px;
+	top: 13px;
+	right: 390px;
 	z-index: 2;
 	p{
 		font-family: Cuprum;
 		text-transform: uppercase;
 		color: #2f2f2f;
-		font-size: 15px;
+		font-size: 16px;
 		font-weight: 400;
 		text-align: right;
+		line-height: 17px;
+		margin-bottom: 10px;
 	}
 	ul{
+		float: right;
+		margin-bottom: 15px;
 		li{
 			a{
-				font-family: Cuprum;
+				font-family: 'RobotoRegular';
 				text-transform: uppercase;
 				color: #006b19;
-				font-size: 30px;
+				font-size: 23px;
 				font-weight: 700;
 				text-align: right;
 				transition: .2s all;
 				&:hover{
 					text-decoration: none;
-					font-size: 28px;
+				}
+				&:focus{
+					text-decoration: none;
 				}
 			}
 		}
@@ -996,19 +1002,19 @@ a:hover {
 }
 .text{
 	position: absolute;
-	bottom: 55px;
-	left: 200px;
+	bottom: 70px;
+	left: 340px;
 }
 .h3first{
 	background-color: #006b19;
 	padding: 17px 4px;
-	width: 105%;
+	width: 120%;
 	margin-bottom: 5px;
 }
 .h3second{
 	background-color: #006b19;
 	padding: 17px 4px;
-	width: 65%;
+	width: 75%;
 }
 
 

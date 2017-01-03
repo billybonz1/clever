@@ -41,19 +41,19 @@ $(function() {
         event.stopPropagation();
     });
 
+    $(window).resize(function(){
+        if($(window).width() >= 528){
+            $(".header-mnu__ul").slideDown();;
+        }
+    })
+
     $('#slider-header').lightSlider({
         adaptiveHeight:true,
         item:1,
         slideMargin:0,
         loop:true,
-        auto: true,
+        auto: false,
     });
-
-    $(window).resize(function(){
-    	if($(window).width() >= 528){
-            $(".header-mnu__ul").slideDown();;
-		}
-	})
 
     $(document).ready(function() {
         $('#slider-clients').lightSlider({
