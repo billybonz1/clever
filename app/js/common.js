@@ -16,36 +16,27 @@ $(function() {
 
     $('.popup').magnificPopup();
 
-    $('.gamburger').on('click',function(){
-        $(this).toggleClass('active');
-        $(".footer-mnu__ul").slideToggle();
+    $(".works__content a").each(function () {
+        $(this).magnificPopup({
+            type: 'image',
+            gallery:{
+                enabled:true
+            }
+        });
     });
 
-    $(document).on("click",function(event){
-        if( $(event.target).closest(".footer-mnu__ul,.gamburger").length )return;
-        $('.gamburger').toggleClass('active');
-        $(".footer-mnu__ul").toggleClass('active');
-        event.stopPropagation();
-    });
 
     $('.gamburger2').on('click',function(){
         $(this).toggleClass('active');
-        $(".header-mnu__ul").slideToggle();
         $(".header-mnu__ul").toggleClass("active")
     });
 
     $(document).on("click",function(event){
         if( $(event.target).closest(".header-mnu__ul,.gamburger2").length )return;
-        $('.gamburger2').toggleClass('active');
-        $(".header-mnu__ul").toggleClass('active');
+        $('.gamburger2').removeClass('active');
+        $(".header-mnu__ul").removeClass('active');
         event.stopPropagation();
     });
-
-    $(window).resize(function(){
-        if($(window).width() >= 528){
-            $(".header-mnu__ul").slideDown();;
-        }
-    })
 
     $('#slider-header').lightSlider({
         adaptiveHeight:true,
@@ -57,43 +48,12 @@ $(function() {
 
     $(document).ready(function() {
         $('#slider-clients').lightSlider({
-            item:5,
-            loop:false,
+            item:1,
+            loop:true,
             slideMove:1,
 			pager: false,
             easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
             speed:600,
-            responsive : [
-                {
-                    breakpoint:1350,
-                    settings: {
-                        item:4,
-                        slideMove:1,
-                        slideMargin:6,
-                    }
-                },
-                {
-                    breakpoint:1060,
-                    settings: {
-                        item:3,
-                        slideMove:1
-                    }
-                },
-                {
-                    breakpoint:800,
-                    settings: {
-                        item:2,
-                        slideMove:1
-                    }
-                },
-                {
-                    breakpoint:650,
-                    settings: {
-                        item:1,
-                        slideMove:1
-                    }
-                }
-            ]
         });
     });
     var sliderBlocks = $('#slider-blocks').lightSlider({

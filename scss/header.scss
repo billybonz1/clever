@@ -853,13 +853,20 @@ a:hover {
 		background: #fff;
 	}
 }
+.current{
+	background-color: #006b19;
+	border-radius: 5px;
+}
 @media only screen and (max-width : 527px){
 	.head{
 		position: relative;
 		.header-mnu{
 			width: 262px;
 			.header-mnu__ul{
-				display: none;
+				visibility: hidden;
+				transform: scale(0);
+				opacity: 0;
+				transition: .2s all;
 				position: fixed;
 				right: 0;
 				left: 0;
@@ -869,6 +876,11 @@ a:hover {
 				height: 100%;
 				padding-top: 80px;
 				z-index: 1;
+				&.active{
+					visibility: visible;
+					transform: scale(1);
+					opacity: 1;
+				}
 				li{
 					float: none;
 					text-align: center;
@@ -917,12 +929,15 @@ a:hover {
 		bottom: -25px;
 		z-index: 1;
 	}
-	.lSSlideOuter .lSPager.lSpg>li a{
-		background-color: #929292;
-		width: 14px;
-		height: 14px;
+	.lSSlideOuter .lSPager.lSpg>li{
+		position: relative;
+		a{
+			background-color: #929292;
+			width: 14px;
+			height: 14px;
+		}
 	}
-	.lSSlideOuter .lSPager.lSpg>li a:focus{
+	.lSSlideOuter .lSPager.lSpg>li.active a, .lSSlideOuter .lSPager.lSpg>li:hover a {
 		background-color: #c9007c;
 	}
 	h3{
@@ -943,17 +958,47 @@ a:hover {
 		}
 	}
 }
+.head__content__slider{
+	.lSSlideOuter .lSGallery li{
+		position: relative;
+	}
+}
+.head__content__slider__a{
+	position: absolute;
+	top: 20px;
+	a {
+		min-width: 250px;
+		min-height: 65px;
+		background-color: #006b19;
+		position: absolute;
+		left: 900px;
+		top: 560px;
+		z-index: 3;
+		text-align: center;
+		padding-top: 11px;
+		color: #fff;
+		font-family: CuprumBold,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+		font-size: 1.5em;
+		border: 3px solid #fff;
+		margin: 10px;
+		-webkit-border-radius: 1px 20px;
+		border-radius: 1px 20px;
+		-webkit-transition: all .5s ease;
+		transition: all .5s ease;
+	}
+
+}
 .head__content__slider__logo{
 	position: absolute;
-	left: 385px;
+	left: 0px;
 	top: 0;
 	z-index: 2;
 }
 .head__content__slider__calls{
 	width: 245px;
 	position: absolute;
-	top: 13px;
-	right: 390px;
+	top: 32px;
+	right: 0px;
 	z-index: 2;
 	p{
 		font-family: Cuprum;
@@ -969,16 +1014,20 @@ a:hover {
 		float: right;
 		margin-bottom: 15px;
 		li{
+			margin: 0;
 			a{
-				font-family: 'RobotoRegular';
+				font-family: CuprumBold,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 				text-transform: uppercase;
 				color: #006b19;
-				font-size: 23px;
+				font-size: 25px;
 				font-weight: 700;
 				text-align: right;
 				transition: .2s all;
+				margin: 0;
+				line-height: 33px;
 				&:hover{
 					text-decoration: none;
+					color: darken(#006b19, 10);
 				}
 				&:focus{
 					text-decoration: none;

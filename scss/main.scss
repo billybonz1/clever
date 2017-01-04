@@ -3888,7 +3888,16 @@ body textarea:required:valid {
     background: url(../img/section1.png);
     width: 154px;
     height: 154px;
-    display: inline-block
+    display: inline-block;
+    position: relative;
+    transition: .5s all;
+    cursor: pointer;
+    &:after{
+        position: absolute;
+    }
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 
 
@@ -3951,7 +3960,7 @@ body textarea:required:valid {
     width: 431px;
 }
 .section2__content__item2{
-    width: 720px;
+    width: 43%;
     margin-left: 50px;
     margin-top: 75px;
 }
@@ -3960,11 +3969,11 @@ body textarea:required:valid {
     vertical-align: top;
     p{
         color: #000000;
-        font-family: Ubuntu;
-        font-size: 23px;
+        font-size: 1.3125em;
         font-weight: 400;
+        font-family: Ubuntu;
         text-align: left;
-        padding-top: 50px;
+        padding-bottom: 25px;
     }
 }
 .section2{
@@ -3976,8 +3985,9 @@ body textarea:required:valid {
     background-image: url("../img/section3-bg.png");
     background-size: cover;
     text-align: center;
-    margin-top: -25px;
     padding-bottom: 150px;
+    position: relative;
+    top: -75px;
     .section1__header{
         margin-top: 135px;
     }
@@ -4009,6 +4019,7 @@ body textarea:required:valid {
     width: 370px;
     height: 366px;
     margin: 15px 0;
+    display: block;
     img{
         width: 100%;
         height: 100%;
@@ -4027,7 +4038,10 @@ body textarea:required:valid {
 }
 .clients{
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 30px;
+    img{
+        width: 65%;
+    }
     .section1__header {
         margin-top: 50px;
     }
@@ -4042,7 +4056,8 @@ body textarea:required:valid {
                     height: 39px;
                     opacity: 1;
                     transition: .3s all;
-                    margin-left: -5px;
+                    margin-left: 7px;
+                    left: 140px;
                     &:hover{
                         transform: scale(1.3);
                     }
@@ -4056,6 +4071,7 @@ body textarea:required:valid {
                     opacity: 1;
                     transition: .3s all;
                     margin-right: 5px;
+                    right: 145px;
                     &:hover{
                         transform: scale(1.3);
                     }
@@ -4131,99 +4147,19 @@ footer{
                 transition: .3s all;
                 &:hover{
                     text-decoration: none;
-                    font-size: 18px;
+                    text-decoration: underline;
                 }
             }
         }
     }
 }
 
-.gamburger{
-    display: none;
-    width: 50px;
-    position: absolute;
-    top: 129px;
-    right: 24px;
-    span{
-        display: block;
-        width: 100%;
-        height: 5px;
-        margin-bottom: 9px;
-        background: #000;
-    }
-}
-@media only screen and (max-width : 795px) {
-    .gamburger {
-        display: block;
-        span {
-            transition: .4s all;
-        }
-        &.active {
-
-            span:first-child {
-                transform: rotate(45deg) translateX(11px) translateY(9px);
-            }
-            span:nth-child(2) {
-                transform: rotate(-45deg) translateX(-1px) translateY(0px);
-            }
-            span:last-child {
-                opacity: 0;
-            }
-        }
-    }
-    .footer-mnu{
-        margin-left: 0;
-        margin-top: 0;
-        ul{
-            display: none;
-            margin-top: 90px;
-            margin-right: 20px;
-            li{
-                float: none;
-            }
-        }
-    }
-    .footer-logo {
-        margin-right: 20px;
-        margin-top: 107px;
-    }
-    footer{
-        .footer-calls{
-            margin-left: 0px;
-            margin-top: 120px;
-        }
-    }
-}
 
 @media only screen and (max-width: 550px){
-    .gamburger {
-        top: 85px;
-        right: 13px;
-    }
+
 }
 
-@media only screen and (max-width: 380px){
-    .footer-logo {
-        margin: 0 87px;
-        margin-top: 240px;
-    }
-    footer{
-        .footer-calls {
-            margin-left: 0;
-            margin-top: 40px;
-        }
-        .footer-mnu{
-            ul {
-                margin-top: 17px;
-                margin-right: 20px;
-            }
-        }
-    }
-    .gamburger {
-        top: 194px;
-        right: 18px;
-    }
-}
+
 
 
 
@@ -4746,6 +4682,9 @@ footer{
 .blockhover-slide2{
     width: 97.4%;
     height: 25%;
+}
+.blockhover-slide3{
+    height: 12%;
 }
 .works__content{
     .lSSlideOuter{
